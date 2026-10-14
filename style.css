@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body {
+  margin: 0;
+  color: #242a29;
+  background: #fafbfa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus-visible {
+  outline: 3px solid #18745d;
+  outline-offset: 5px;
+}
+.header {
+  max-width: 1280px;
+  margin: auto;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dde3df;
+  gap: 24px;
+}
+.brand {
+  font-size: 23px;
+  font-weight: 750;
+}
+.brand span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727d76;
+}
+nav {
+  display: flex;
+  gap: 26px;
+  font-size: 14px;
+}
+main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 40px;
+}
+.intro {
+  padding: 64px 0 58px;
+}
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 650;
+  color: #687b70;
+}
+h1 {
+  margin: 20px 0;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.08;
+}
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #63706a;
+}
+.intro p {
+  margin-bottom: 0;
+}
+/* Each sidebar sticks only within its own chapter. */
+.chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 64px;
+  align-items: start;
+  padding-bottom: 72px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid #dde3df;
+}
+.stories {
+  min-width: 0;
+}
+article + article {
+  margin-top: 52px;
+}
+article img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  background: #d4dfd9;
+}
+article .eyebrow {
+  margin-top: 25px;
+}
+h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 18px 0;
+}
+article p {
+  margin: 14px 0 0;
+}
+.sticky {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  border: 1px solid #d9e1db;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.compact {
+  padding: 26px;
+  background: #edf3ec;
+}
+h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 16px 0;
+}
+.sticky p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.detail {
+  margin-top: 26px;
+  padding: 18px 0;
+  border-top: 1px solid #cbd7ce;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+}
+.detail span {
+  color: #66766b;
+}
+.detail strong {
+  font-weight: 600;
+}
+.next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #cbd7ce;
+  font-size: 13px;
+  font-weight: 600;
+}
+.next span {
+  font-size: 20px;
+}
+.medium {
+  background: #fff;
+}
+.aside-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 7px 7px 0 0;
+  background: #d4dfd9;
+}
+.aside-body {
+  padding: 24px;
+}
+ul {
+  padding-left: 18px;
+  margin: 22px 0;
+  color: #63706a;
+  font-size: 13px;
+  line-height: 2;
+}
+.large {
+  padding: 28px;
+  background: #edf2f8;
+  border-color: #d3ddea;
+}
+.large .eyebrow {
+  color: #526f94;
+}
+.large h3 {
+  font-size: 40px;
+}
+.schedule {
+  margin: 28px 0;
+  border-top: 1px solid #cbd6e6;
+  padding-top: 24px;
+}
+.schedule > span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #526f94;
+}
+h4 {
+  margin: 10px 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+.schedule p {
+  margin: 0 0 28px;
+}
+.schedule p:last-child {
+  margin-bottom: 0;
+}
+footer {
+  max-width: 1280px;
+  padding: 0 40px 50px;
+  margin: auto;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #63706a;
+}
+@media (max-width: 900px) {
+  .chapter {
+    gap: 30px;
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+  main,
+  .header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .header {
+    padding: 22px 20px;
+    flex-wrap: wrap;
+  }
+  nav {
+    gap: 24px;
+  }
+  main {
+    padding: 0 20px;
+  }
+  .intro {
+    padding: 42px 0;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+  /* Stacked mobile cards stay in normal flow so they cannot cover the article. */
+  .sticky {
+    position: static;
+  }
+  footer {
+    padding: 0 20px 32px;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
